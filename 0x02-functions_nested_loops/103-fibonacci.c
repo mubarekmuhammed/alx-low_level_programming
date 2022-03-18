@@ -1,27 +1,33 @@
-include <stdio.h>
+#include <stdio.h>
+
 /**
  * main - Entry point
  *
- * Return: end program
+ * purpose - fibonacci
+ *
+ * Return: (0) always
  */
-int main(void)
-{
-	int i = 1;
-	long int  num1 = 0;
-	long int num2 = 1;
-	long int sumPrevTwo = 0;
-	long int sumEven = 0;
-	long int maxFibTerm = 4000000;
-
-	while (num1 < maxFibTerm && num2 < maxFibTerm)
+	int main(void)
 	{
-		sumPrevTwo = num1 + num2;
-		sumEven += (((sumPrevTwo % 2) == 0) ? sumPrevTwo : 0);
-		num1 = num2;
-		num2 = sumPrevTwo;
-		i++;
-	}
-	printf("%ld\n", sumEven);
-	return (0);
+		unsigned long int lim = 4000000;
+		unsigned long int bef = 0;
+		unsigned long int aft = 1;
+		unsigned long int R = 0;
+		unsigned long int sum = 0;
+
+		while (lim > R)
+		{
+			R = bef + aft;
+
+			if ((R % 2) == 0)
+			{
+				sum += R;
+			}
+
+			bef = aft;
+			aft = R;
+		}
+		printf("%li\n", sum);
+		return (0);
 }
 
