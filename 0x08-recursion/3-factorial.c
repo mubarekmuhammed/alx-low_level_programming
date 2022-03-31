@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * factorial - returns factorial of a given number
+ *factorial - returns factorial of a given number
  *
- * @n:input
- * 
- * Return: n < 0 - -1,
- * 
- *        */
+ *@n:input
+ *
+ *Return: n < 0 - -1,
+ *
+ */
 int factorial(int n)
 {
 	if (n < 0)
