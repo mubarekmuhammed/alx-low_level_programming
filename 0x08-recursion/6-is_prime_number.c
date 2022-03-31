@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * _prime - returns 1 if no. is prime
+ *_prime - returns 1 if no. is prime
  *
- * @f: input
- * @p:input
- * Return:1 - prime ,0- otherwise
- *   
+ *@f: input
+ *@p:input
+ *Return:1 - prime ,0- otherwise
+ *
  */
 int _prime(int f, int p)
 {
@@ -23,11 +23,11 @@ int _prime(int f, int p)
 	}
 }
 /**
- * is_prime_number - returns 1 if a number is prime
- *   
- * @n:input
- * Return: 1-prime,0-otherwise
- * 
+ *is_prime_number - returns 1 if a number is prime
+ *
+ *@n:input
+ *Return: 1-prime,0-otherwise
+ *
  */
 int is_prime_number(int n)
 {
