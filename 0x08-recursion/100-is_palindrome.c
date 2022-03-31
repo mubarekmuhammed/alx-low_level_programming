@@ -1,64 +1,51 @@
 #include "main.h"
 
 /**
- * str_len - getting string len
- * @s: indicating an input value
- *
- * Description: finding the length of a string
- * Return: returns string's length
+ * last_index - returns the last index of a string (counts the null char)
+ * @s: pointer the string
+ * Return: int
  */
 
-int str_len(char *s)
+int last_index(char *s)
 {
-	if (*s == '\0')
-	{
-		return (0);
-	}
-	return (1 + str_len(s + 1));
+int n = 0;
+
+if (*s > '\0')
+	n += last_index(s + 1) + 1;
+
+return (n);
 }
 
 /**
- * is_palindrome - checks for a palindrome
- * @s: input character
- * @i: an interator
- * @len: string length indicator
- *
- * Description: checking if a string is a palindrome
- * Return: the state of the string
- */
-
-int check_palindrome(char *s, int len, int i)
-{
-	if (s[i] == s[len / 2])
-	{
-		return (1);
-	}
-	if (s[i] == s[len - i - 1])
-	{
-		return (check_palindrome(s, len, i + 1));
-	}
-	return (0);
-}
-
-/**
- * is_palindrome - print palindrome
- * @s: input string
- *
- * Description: returns 1 if a string is a
- * palindrome and 0 if not
- * Return: state of input string
+ * is_palindrome - check if a string is a palindrome
+ * @s: string to check
+ * Return: 0 or 1
  */
 
 int is_palindrome(char *s)
 {
-	int i, len;
+int end = last_index(s);
 
-	i = 0;
-	len = str_len(s);
+return (check(s, 0, end - 1, end % 2));
+}
 
-	if (!*s)
-	{
-		return (1);
-	}
-	return (check_palindrome(s, len, i));
+/**
+ * check - checker for the palindrome
+ * @s: string
+ * @start: int moves from right to left
+ * @end: int moves from left to right
+ * @pair: int
+ * Return: 0 or 1
+ */
+
+
+int check(char *s, int start, int end, int pair)
+{
+
+if ((start == end && pair != 0) || (start == end + 1 && pair == 0))
+	return (1);
+else if (s[start] != s[end])
+	return (0);
+else
+	return (check(s, start + 1, end - 1, pair));
 }
