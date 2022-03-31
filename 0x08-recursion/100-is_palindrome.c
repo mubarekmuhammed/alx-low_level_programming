@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * str_len - getting string len
+ * str_len - get string len
  * @s: indicating an input value
  *
- * Description: finding the length of a string
+ * 
  * Return: returns string's length
  */
 
@@ -23,7 +23,7 @@ int str_len(char *s)
  * @i: an interator
  * @len: string length indicator
  *
- * Description: checking if a string is a palindrome
+ * 
  * Return: the state of the string
  */
 
@@ -44,8 +44,8 @@ int check_palindrome(char *s, int len, int i)
  * is_palindrome - print palindrome
  * @s: input string
  *
- * Description: returns 1 if a string is a
- * palindrome and 0 if not
+ * 
+ * palindrome and 0 if not it is
  * Return: state of input string
  */
 
