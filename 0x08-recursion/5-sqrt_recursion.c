@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * _sqrt - returns sqrt
- *  
- * @n: int param
- * @i: value to be tested
- *      
- * Return:sqrt
- *        
+ *_sqrt - returns sqrt
+ *
+ *@n: int param
+ *@i: value to be tested
+ *
+ *Return:sqrt
+ *
  */
 int _sqrt(int n, int i)
 {
@@ -25,12 +25,12 @@ int _sqrt(int n, int i)
 	return (_sqrt(n, i + 1));
 }
 /**
- * _sqrt_recursion - returns square root of a natural number
- *   
- * @n:number to find sqrt
- *     
- * Return:sqrt,(-1) no natural sqrt
- *       
+ *_sqrt_recursion - returns square root of a natural number
+ *
+ *@n:number to find sqrt
+ *
+ *Return:sqrt,(-1) no natural sqrt
+ *
  */
 int _sqrt_recursion(int n)
 {
